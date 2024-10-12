@@ -4,7 +4,7 @@ import Footer from '../components/Footer.astro';
 
 import '../styles/global.css';
 
-const pageTitle = "Home Page";
+const { pageTitle } = Astro.props;
 ---
 
 <html lang="en">
@@ -20,6 +20,7 @@ const pageTitle = "Home Page";
 		
 		<h1>{pageTitle}</h1>
 
+        <slot />
 		<Footer />
 		<script>
 			import "../scripts/menu.js";
